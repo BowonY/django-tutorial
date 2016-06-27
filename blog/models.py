@@ -10,10 +10,13 @@ class Post(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
+    # post number field
+    post_id = models.IntegerField(default=1)
 
     def publish(self):
         self.published_date = timezone.now()
         self.save()
 
     def __str__(self):
+        print('str function!!')
         return self.title
