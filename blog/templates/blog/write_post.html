@@ -1,0 +1,10 @@
+<html>
+    <form action="/write/" method="post">
+        {% csrf_token %}
+        <label for="title">Title: </label>
+        <input id="title" type="text" name="title">
+        <label for="text">Text: </label>
+        <input id="text" type="text" name="text">
+        <input type="submit" value="OK">
+    </form>
+</html>

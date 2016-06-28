@@ -1,4 +1,13 @@
 <html>
     <p>Hi</p>
+    {% if latest_post_list %}
+    <ul>
+        {% for post in latest_post_list %}
+        <li><a href="/posts/{{post.post_id}}/">{{post.text}}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No post exists.</p>
+    {% endif %}
 
 </html>

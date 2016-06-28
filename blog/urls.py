@@ -7,6 +7,8 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
-    url(r'^posts/([0-9]+)/$', views.posts, name='posts'),
-    url(r'^post_list/$', views.post_list, name='post_list'),
+    url(r'^category/([0-9]+)/$', views.category, name='category'),
+    url(r'^posts/$', views.post_list, name='post_list'),
+    url(r'^posts/([0-9]+)/$', views.post_view, name='post_view'),
+    url(r'^write/$', views.write_post, name='write_post'),
 ]
